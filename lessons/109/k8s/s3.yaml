@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: aws-test
+  name: foo
   namespace: staging
   annotations:
     eks.amazonaws.com/role-arn: arn:aws:iam::424432388155:role/list-s3-buckets
@@ -13,7 +13,7 @@ metadata:
   name: aws-cli
   namespace: staging
 spec:
-  serviceAccountName: aws-test
+  serviceAccountName: foo
   containers:
   - name: aws-cli
     image: amazon/aws-cli
