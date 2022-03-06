@@ -23,7 +23,7 @@
                 "iam:GetOpenIDConnectProvider",
                 "iam:CreateOpenIDConnectProvider",
                 "iam:DeleteOpenIDConnectProvider",
-                "iam:TagOpenIDConnectProvider",                
+                "iam:TagOpenIDConnectProvider",
                 "iam:ListAttachedRolePolicies",
                 "iam:TagRole"
             ],

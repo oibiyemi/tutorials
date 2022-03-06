@@ -4,14 +4,18 @@ kind: ClusterConfig
 metadata:
   name: cluster-irsa
   region: us-east-1
+availabilityZones:
+- us-east-1a
+- us-east-1b
 iam:
   withOIDC: true
   serviceAccounts:
   - metadata:
       name: foo
       namespace: staging
+    roleName: list-s3-buckets
     attachPolicyARNs:
-    - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+    - arn:aws:iam::424432388155:policy/AllowListAllMyBuckets
   - metadata:
       name: cluster-autoscaler
       namespace: kube-system
