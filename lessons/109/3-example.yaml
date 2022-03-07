@@ -13,9 +13,10 @@ iam:
   - metadata:
       name: foo
       namespace: staging
-    roleName: list-s3-buckets
     attachPolicyARNs:
     - arn:aws:iam::424432388155:policy/AllowListAllMyBuckets
+    roleName: list-s3-buckets
+    roleOnly: true
   - metadata:
       name: cluster-autoscaler
       namespace: kube-system
