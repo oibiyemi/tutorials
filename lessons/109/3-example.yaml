@@ -15,6 +15,7 @@ iam:
       namespace: staging
     attachPolicyARNs:
     - arn:aws:iam::424432388155:policy/AllowListAllMyBuckets
+    # role has to start with eksctl-*
     roleName: list-s3-buckets
     roleOnly: true
   - metadata:
